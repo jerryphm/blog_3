@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const { engine } = require("express-handlebars");
 const path = require("path");
@@ -5,7 +7,7 @@ const methodOverride = require("method-override");
 const route = require("./routes");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 app.engine("handlebars", engine({
     helpers: {
