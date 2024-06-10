@@ -1,0 +1,25 @@
+<form method="POST" id="create-post">
+  {{! title }}
+  <label for="create-title" class="body1">Post title</label>
+  <input
+    type="text"
+    id="create-title"
+    class="create-field body1"
+    name="title"
+  />
+
+  {{! body }}
+  <label for="create-body" class="body1">Post content</label>
+  <textarea name="body" id="create-body" class="body1"></textarea>
+
+  {{! cover }}
+  <label for="create-cover" class="body1"> Post cover image</label>
+  <input
+    type="text"
+    id="create-cover"
+    class="create-field body1"
+    name="cover"
+  />
+
+  <button type="submit" id="create-submit-btn" class="body1">Create</button>
+</form>

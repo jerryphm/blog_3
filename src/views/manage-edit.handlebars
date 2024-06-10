@@ -1,0 +1,30 @@
+<span class="heading3">Edit Post</span>
+<form method="POST" action="/manage?p={{post._id}}&_method=PATCH" id="create-post">
+  {{! title }}
+  <label for="create-title" class="body1">Post title</label>
+  <input
+    type="text"
+    id="create-title"
+    class="create-field body1"
+    name="title"
+    value="{{post.title}}"
+  />
+
+  {{! body }}
+  <label for="create-body" class="body1">Post content</label>
+  <textarea name="body" id="create-body" class="body1">
+    {{post.body}}
+  </textarea>
+
+  {{! cover }}
+  <label for="create-cover" class="body1"> Post cover image</label>
+  <input
+    type="text"
+    id="create-cover"
+    class="create-field body1"
+    name="cover"
+    value="{{post.cover}}"
+  />
+
+  <button type="submit" id="create-submit-btn" class="body1">Update</button>
+</form>

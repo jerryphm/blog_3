@@ -1,0 +1,29 @@
+{{#each posts}}
+  <div class="card">
+    <a class="card-link-wrap" href="/posts?p={{this._id}}">
+      <img class="card-cover" src="{{this.cover}}" alt="" />
+
+      <div class="card-text">
+        <span class="card-text-time body3">{{formatDate this.createdAt}}</span>
+        <h2 class="card-text-title body1">{{this.title}}</h2>
+      </div>
+    </a>
+
+    <div class="card-options">
+      <div class="card-options-left">
+        <button class="card-button">
+          <img src="/assets/heart.svg" alt="" />
+        </button>
+        <button class="card-button">
+          <img src="/assets/comment.svg" alt="" />
+        </button>
+        <button class="card-button">
+          <img src="/assets/send.svg" alt="" />
+        </button>
+      </div>
+      <button class="card-options-right card-button">
+        <img src="/assets/bookmark.svg" alt="" />
+      </button>
+    </div>
+  </div>
+{{/each}}

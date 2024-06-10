@@ -1,0 +1,28 @@
+<div class="manage-posts">
+  <table>
+    <tr>
+      <th>Number</th>
+      <th>Title</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    {{#each posts}}
+      <tr class="manage-posts-row">
+        <td>{{addOne @index}}</td>
+        <td>
+          <a href="/posts?p={{this._id}}" class="body1">{{this.title}}</a>
+        </td>
+        <td>{{formatDate this.createdAt}}</td>
+        <td>{{formatDate this.updatedAt}}</td>
+        <td><a href="/manage/edit?p={{this._id}}">Edit</a></td>
+        <td>
+          <form action="/manage?p={{this._id}}&_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+</div>
