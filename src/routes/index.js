@@ -29,7 +29,7 @@ const route = (app) => {
       post.createdAt = now;
       post.updatedAt = now;
       await postsCollection.insertOne(post);
-      res.render("create");
+      res.redirect("/")
     })
   );
 
